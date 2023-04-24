@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 
 const HttpError = require("./models/Error");
 const usersRoutes = require("./routes/usersRoutes");
+const citiesRoutes = require("./routes/citiesRoutes");
 // const users = require("./data");
 // const User = require("./models/User");
 
@@ -20,6 +21,7 @@ app.use(function (req, res, next) {
 });
 
 app.use("/api/users", usersRoutes);
+app.use("/api/cities", citiesRoutes);
 
 app.use((req, res, next) => {
   throw new HttpError("Route not found", 404);
