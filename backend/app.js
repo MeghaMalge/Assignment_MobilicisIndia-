@@ -5,6 +5,8 @@ const mongoose = require("mongoose");
 const HttpError = require("./models/Error");
 const usersRoutes = require("./routes/usersRoutes");
 const citiesRoutes = require("./routes/citiesRoutes");
+
+// Required for inserting data
 // const users = require("./data");
 // const User = require("./models/User");
 
@@ -38,11 +40,13 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://mobilicis_india:mobilicis_india@cluster0.jntgd5b.mongodb.net/?retryWrites=true&w=majority"
+    `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.jntgd5b.mongodb.net/?retryWrites=true&w=majority`
   )
   .then(() => {
     app.listen(5000);
     console.log("server started at port 5000, connected to database");
+
+    // Data inserted in database
     // User.insertMany(users);
   })
   .catch((err) => {

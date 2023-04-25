@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import "./Users.css";
-import Header from "../Header";
 import { useHttpClient } from "../../hooks/http-hook";
+import { usersFilters } from "../../constants";
+import Header from "../Header";
 import UsersList from "../UsersList";
 import ErrorModal from "../ErrorModal";
-import { usersFilters } from "../../constants";
+
+import "./Users.css";
 
 export default function Users() {
   const { isLoading, error, sendRequest, clearError } = useHttpClient();
@@ -16,8 +17,8 @@ export default function Users() {
     const fetchUsers = async () => {
       const data = await sendRequest(
         usersCase
-          ? `http://localhost:5000/api/users/${usersCase.name}`
-          : "http://localhost:5000/api/users"
+          ? `${process.env.REACT_APP_BACKEND_URL}/users/${usersCase.name}`
+          : `${process.env.REACT_APP_BACKEND_URL}/users`
       );
 
       if (!error) {
@@ -31,8 +32,8 @@ export default function Users() {
   return (
     <div>
       <ErrorModal error={error} onClear={clearError} />
-      <Header>Our Users</Header>
-      <div>
+      <Header className="heading1">Our Users</Header>
+      <div className="users-filters">
         <span>Filter users</span>
         {usersFilters.map((filter) => {
           return (
