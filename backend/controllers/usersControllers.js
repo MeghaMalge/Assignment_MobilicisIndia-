@@ -1,6 +1,18 @@
 const HttpError = require("../models/Error");
 const User = require("../models/User");
 
+//All users
+const getAllUsers = async (req, res, next) => {
+  let users;
+  try {
+    users = await User.find();
+  } catch (error) {
+    return next(new HttpError("fetching users failed", 500));
+  }
+
+  res.status(200).json(users);
+};
+
 //case1 = Users which have income lower than $5 USD and have a car of brand “BMW” or “Mercedes”.
 const getCase1Users = async (req, res, next) => {
   let users;
@@ -60,6 +72,7 @@ const getCase4Users = async (req, res, next) => {
   res.status(200).json(users);
 };
 
+exports.getAllUsers = getAllUsers;
 exports.getCase1Users = getCase1Users;
 exports.getCase2Users = getCase2Users;
 exports.getCase3Users = getCase3Users;

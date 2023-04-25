@@ -7,7 +7,11 @@ const {
   getCase2Users,
   getCase3Users,
   getCase4Users,
+  getAllUsers,
 } = require("../controllers/usersControllers");
+
+//All users
+router.get("/", getAllUsers);
 
 //case1 = Users which have income lower than $5 USD and have a car of brand “BMW” or “Mercedes”.
 router.get("/case1", getCase1Users);
