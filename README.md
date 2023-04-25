@@ -17,4 +17,10 @@ This website is built using MERN Stack. Hosted on Render.
 
 * https://mobilicisassignmentbackend.onrender.com/api/users/case4 gives users which have a car of brand “BMW”, “Mercedes” or “Audi” and whose email does not include any digit.
 
+## Frontend functionalities
 
+* Top 10 cities displayed in carousel. Use forward and backward handlers/buttons to see next or previous cities.
+
+* All users are displayed in tabular form on load. Filters are provided to filter the users accordingly.
+
+* Click on the user row to see more details of them.
