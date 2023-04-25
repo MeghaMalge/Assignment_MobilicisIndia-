@@ -5,16 +5,16 @@ This website is built using MERN Stack. Hosted on Render.
 
 ##Backend APIs
 
-* https://mobilicisassignmentbackend.onrender.com/api/cities/top10 gives [Top 10 cities](https://mobilicisassignmentbackend.onrender.com/api/cities/top10).
+* https://mobilicisassignmentbackend.onrender.com/api/cities/top10 gives top 10 cities.
 
-* https://mobilicisassignmentbackend.onrender.com/api/users gives [All users](https://mobilicisassignmentbackend.onrender.com/api/users).
+* https://mobilicisassignmentbackend.onrender.com/api/users gives all users.
 
-* https://mobilicisassignmentbackend.onrender.com/api/users/case1 gives [Users which have income lower than $5 USD and have a car of brand “BMW” or “Mercedes”.](https://mobilicisassignmentbackend.onrender.com/api/users/case1).
+* https://mobilicisassignmentbackend.onrender.com/api/users/case1 gives users which have income lower than $5 USD and have a car of brand “BMW” or “Mercedes”.
 
-* https://mobilicisassignmentbackend.onrender.com/api/users/case2 gives [Male Users which have phone price greater than 10,000.](https://mobilicisassignmentbackend.onrender.com/api/users/case2).
+* https://mobilicisassignmentbackend.onrender.com/api/users/case2 gives male Users which have phone price greater than 10,000.
+* 
+* https://mobilicisassignmentbackend.onrender.com/api/users/case3 gives users whose last name starts with “M” and has a quote character length greater than 15 and email includes his/her last name.
 
-* https://mobilicisassignmentbackend.onrender.com/api/users/case3 gives [Users whose last name starts with “M” and has a quote character length greater than 15 and email includes his/her last name.](https://mobilicisassignmentbackend.onrender.com/api/users/case3).
-
-* https://mobilicisassignmentbackend.onrender.com/api/users/case4 gives [Users which have a car of brand “BMW”, “Mercedes” or “Audi” and whose email does not include any digit.](https://mobilicisassignmentbackend.onrender.com/api/users/case4).
+* https://mobilicisassignmentbackend.onrender.com/api/users/case4 gives users which have a car of brand “BMW”, “Mercedes” or “Audi” and whose email does not include any digit.
 
 
